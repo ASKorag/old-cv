@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CV</title>
+  </head>
+  <body>
+    <main class="cv">
+      <section class="main-info">
+        <div class="main-info__avatar">
+          <img
+            src="./assets/images/avatar.jpg"
+            alt="avatar"
+            width="240"
+            height="240"
+          >
+        </div>
+        <div class="name-and-contacts">
+          <h1 class="name">Andrey Serikov</h1>
+          <h2 class="contacts__title title">Contacts</h2>
+          <address>
+            <ul class="contacts__list list">
+              <li class="contacts__item list__item">
+                Tel: <strong>+375293850999</strong>
+              </li>
+              <li class="contacts__item list__item">
+                E-mail:
+                <a href="mailto:as.korag@gmail.com"
+                  ><strong> AS.Korag@protonmail.com</strong></a
+                >
+              </li>
+              <li class="contacts__item list__item">
+                Telegram: <strong> @ubyrfehxbu_f</strong>
+              </li>
+              <li class="contacts__item list__item">
+                Discord: <strong> AS.Korag(@ASKorag)</strong> (rs-school server)
+              </li>
+              <li class="contacts__item list__item">
+                VK:
+                <a href="https://vk.com/as.korag">
+                  <strong> AS.Korag</strong></a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+      </section>
+
+      <section class="about">
+        <h2 class="about__title title">About me</h2>
+        <p class="about__aim-and-info">
+          Brief personal information: 26 years old, higher education, married,
+          have a son. My aim is to do what I love and become a professional at
+          it. My strengths:
+        </p>
+        <ol class="about__list list">
+          <li class="about__item list__item">Fast learning</li>
+          <li class="about__item list__item">Dislike for low-quality work</li>
+          <li class="about__item list__item">Hard work</li>
+          <li class="about__item list__item">Curiosity</li>
+          <li class="about__item list__item">Honesty</li>
+          <li class="about__item list__item">No bad habits</li>
+        </ol>
+      </section>
+
+      <section class="skills">
+        <h2 class="skills__title title">My skills</h2>
+        <div class="main-skills">
+          <h3 class="main-skills__title subtitle">Main skills</h3>
+          <ul class="main-skills__list list">
+            <li class="main-skills__item list__item">JS + TS</li>
+            <li class="main-skills__item list__item">HTML (Pug)</li>
+            <li class="main-skills__item list__item">CSS (SASS)</li>
+            <li class="main-skills__item list__item">Git</li>
+            <li class="main-skills__item list__item">Webpack</li>
+            <li class="main-skills__item list__item">React (Redux)</li>
+          </ul>
+        </div>
+        <div class="additional-skills">
+          <h3 class="additional-skills__title subtitle">Additional skills</h3>
+          <ul class="additional-skills__list list">
+            <li class="additional-skills__item item">Linux</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sample-code">
+        <h2 class="sample-code__title title">Sample code</h2>
+        <pre>
+          <code>
+  const check = (str, bracketsConfig) => {
+    const newStr = str
+           
+    const escapedChars = '[()|'
+           
+    let isIdentity
+           
+    do {
+     isIdentity = false
+           
+      for (paar of bracketsConfig) {
+        const stringForRegExp = paar
+        .map(char =>
+          escapedChars.includes(char) === true ? `\\${char}` : char
+        )
+        .join('')
+           
+        const regExp = new RegExp(stringForRegExp, 'g')
+           
+        if (regExp.test(newStr)) {
+          isIdentity = true
+          newStr = newStr.replace(regExp, '')
+        }
+      }
+    } while (isIdentity)
+           
+    return newStr.length === 0
+  }
+          </code>
+        </pre>
+      </section>
+
+      <section class="work-experience">
+        <h2 class="work-experience__title title">Work experience</h2>
+        &#128546
+      </section>
+
+      <section class="education">
+        <h2 class="education__title title">Education</h2>
+        <ul class="education__links list">
+          <li class="education__link list__item">
+            <a href="https://learn.javascript.ru/"
+              >The Modern JavaScript Tutorial</a
+            >
+          </li>
+          <li class="education__link list__item">
+            <a href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw"
+              >&lt;VM&gt;</a
+            >
+          </li>
+          <li class="education__link list__item">
+            <a href="https://www.youtube.com/channel/UCTW0FUhT0m-Bqg2trTbSs0g"
+              >IT-KAMASUTRA</a
+            >
+          </li>
+          <li class="education__link list__item">
+            <a href="https://www.youtube.com/channel/UCE9ODjNIkOHrnSdkYWLfYhg"
+              >webDev</a
+            >
+          </li>
+          <li class="education__link list__item">
+            <a href="https://www.youtube.com/channel/UCmI5YBB9KJ0xLtFtgBX8rfw"
+              >Front-end Science c Сергеем Пузанковым</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="english-level">
+        <h2 class="english-level__title title">English level</h2>
+        At the moment my level is <mark>A2</mark>, but I'm constantly learning and I'm not
+        going to stop until I can speak fluently.
+      </section>
+      <footer class="footer">
+        <ul class="footer__links list">
+          <li class="footer__link list__item">
+            <a href="https://github.com/askorag/"
+              ><img
+                src="./assets/icons/github.svg"
+                alt="github"
+                width="32"
+                height="32"
+            ></a>
+          </li>
+          <li class="footer__link list__item">
+            <a href="https://rs.school/js/"
+              ><img
+                class="footer__link--rss"
+                src="./assets/icons/rs_school_js.svg"
+                alt="rs-school-js"
+                width="553"
+                height="205"
+            ></a>
+          </li>
+        </ul>
+        <div class="footer__date"><time datetime="2021">2021</time></div>
+      </footer>
+    </main>
+  </body>
+</html>
