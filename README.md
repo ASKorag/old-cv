@@ -1,1 +1,0 @@
-https://askorag.github.io/rsschool-cv/cv
